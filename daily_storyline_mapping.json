@@ -6,7 +6,8 @@
 	    "lastUpdate": { "type": "date",
 			    "format": "basic_date_time_no_millis"},
 	    "summary": {
-		"type": "object",
+		"type": "nested",
+		"include_in_parent": true,
 		"properties": {
 		    "activity": { "type": "string"},
 		    "group": { "type": "string"},
@@ -17,7 +18,8 @@
 		}
 	    },
 	    "segments": {
-		"type": "object",
+		"type": "nested",
+		"include_in_parent": true,
 		"properties": {
 		    "type": { "type": "string"},
 		    "lastUpdate": { "type": "date",
@@ -27,7 +29,8 @@
 		    "endTime": { "type": "date",
 				 "format": "basic_date_time_no_millis"},
 		    "place": {
-			"type": "object",
+			"type": "nested",
+			"include_in_parent": true,
 			"properties": {
 			    "id": { "type": "integer"},
 			    "name": { "type": "string", "index":"not_analyzed"},
@@ -38,7 +41,8 @@
 			}
 		    },
 		    "activities": {
-			"type": "object",
+			"type": "nested",
+			"include_in_parent": true,
 			"properties": {
 			    "activity": { "type": "string"},
 			    "group": { "type": "string"},
@@ -52,7 +56,8 @@
 			    "steps": { "type": "integer"},
 			    "calories": { "type": "integer"},
 			    "trackPoints": {
-				"type": "object",
+				"type": "nested",
+				"include_in_parent": true,
 				"properties": {
 				    "lat": { "type": "float"},
 				    "lon": { "type": "float"},
